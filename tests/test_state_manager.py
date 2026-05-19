@@ -8,7 +8,7 @@ class StateManagerTests(unittest.TestCase):
         state = default_state()
         self.assertIn("title", state)
         self.assertIn("providers", state)
-        self.assertEqual(state["source"], "sanitized_sample")
+        self.assertEqual(state["source"], "demo_sample")
         self.assertEqual(state["providers"], [])
 
 
