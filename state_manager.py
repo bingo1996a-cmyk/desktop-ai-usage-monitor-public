@@ -13,7 +13,7 @@ STATE_FILE = get_data_dir() / "state.json"
 def default_state() -> Dict[str, Any]:
     return {
         "title": "Desktop AI Usage Monitor",
-        "source": "sanitized_sample",
+        "source": "demo_sample",
         "providers": [],
         "last_loaded_at": None,
     }
