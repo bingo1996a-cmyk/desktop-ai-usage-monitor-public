@@ -7,7 +7,7 @@ This repository is intentionally small. It demonstrates a safe public split betw
 1. a desktop presentation layer
 2. a local persistence layer
 3. a provider abstraction layer
-4. sanitized evidence and sample payloads
+4. example monthly summary payloads
 
 ## Layers
 
@@ -20,7 +20,7 @@ Responsibilities:
 
 - start the desktop app
 - render the current usage snapshot
-- let the user reload sanitized sample data
+- let the user reload the demo sample
 
 ### Formatting Layer
 
@@ -52,9 +52,9 @@ Responsibilities:
 Responsibilities:
 
 - define a small provider interface
-- load sanitized local sample data
+- load local demo sample data
 
-This public layer is intentionally auth-free.
+The default provider layer in this repository is file-based.
 
 ### Evidence Layer
 
@@ -66,29 +66,31 @@ Responsibilities:
 - provide non-sensitive example inputs
 - provide a human-readable explanation of the included monthly summary
 
-## Public vs Private Boundary
+## Repository Focus
 
-This public repo should contain:
+This repository focuses on:
 
 - UI structure
 - local persistence
 - provider contracts
-- sanitized examples
+- example inputs
 - testable pure helpers
 
-This public repo should not contain:
+## Extension Direction
 
-- raw provider credentials
-- raw session cookies
-- account identifiers
-- raw usage exports
-- provider-specific scraping or login recovery logic
+Teams extending this pattern may add:
+
+- provider adapters
+- historical storage
+- charts and trend views
+- richer alerting logic
 
 ## Why This Pattern Matters
 
 For many local AI workflows, the hard part is not drawing a widget. The hard part is preserving a clean separation between:
 
-- portable engineering patterns that are safe to publish
-- private adapters that should remain local
+- a small always-on UI surface
+- data loading and persistence logic
+- reusable formatting helpers
 
-This repository is designed to keep that split obvious.
+This repository is designed to keep those boundaries obvious.
