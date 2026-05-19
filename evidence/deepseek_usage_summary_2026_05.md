@@ -1,4 +1,4 @@
-# DeepSeek Usage Summary (Sanitized)
+# DeepSeek Usage Summary
 
 Period: `2026-05`
 
@@ -24,9 +24,7 @@ Period: `2026-05`
   - active days: `18`
   - requests: `10,479`
 
-## Redaction Policy
+## Notes
 
-- raw `user_id` excluded
-- raw `api_key` excluded
-- raw daily rows excluded
-- only aggregated statistics included
+- This page records the monthly summary shown in the desktop demo.
+- The metrics are presented as aggregated monthly fields.
