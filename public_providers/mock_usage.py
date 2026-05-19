@@ -1,4 +1,4 @@
-"""Load a sanitized local sample snapshot for the public demo."""
+"""Load a local sample snapshot for the desktop demo."""
 
 from __future__ import annotations
 
