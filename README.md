@@ -1,15 +1,13 @@
 # Desktop AI Usage Monitor
 
-A public-safe desktop demo for monitoring AI usage metrics on a local machine.
+A local desktop demo for monitoring AI usage metrics on a workstation.
 
-This repository is a cleaned public extract of a larger private desktop tool. It keeps the publishable architecture and removes private adapters, browser-session logic, personal paths, credentials, and raw account records.
-
-The goal is not to publish a complete production monitor. The goal is to publish a safe, inspectable desktop pattern for:
+This repository presents a compact desktop pattern for:
 
 - AI usage visibility
 - cost awareness
 - local observability
-- clean separation between public architecture and private adapters
+- lightweight metric display
 
 ## Why This Repo Exists
 
@@ -18,26 +16,18 @@ Many AI-heavy local workflows need a small, always-on surface for answering ques
 - How much usage have I accumulated this month?
 - How expensive is the current workflow?
 - Are cached inputs dominating the token profile?
-- Can I keep provider-specific credentials and session logic out of the public codebase?
+- Can I review these metrics without opening a larger dashboard?
 
-This repo demonstrates one answer: a local desktop widget backed by sanitized sample data and a public-safe provider abstraction.
+This repo demonstrates one answer: a local desktop widget backed by repository sample data and a generic provider abstraction.
 
-## What This Public Version Shows
+## What This Repo Shows
 
 - A local-only desktop widget built with `PySide6`
 - A generic provider model for AI usage metrics
 - Local JSON state persistence with atomic writes
 - Pure formatting helpers and lightweight tests
-- Sanitized monthly evidence derived from real usage records
-- A safe boundary between public demo code and private account adapters
-
-## What Is Intentionally Not Included
-
-- API keys, cookies, or login sessions
-- Private provider adapters
-- Raw account identifiers
-- Raw billing CSV exports
-- Personal notes, handoff docs, or local machine paths
+- An example monthly usage summary
+- A modular structure that can be extended with more providers or views
 
 ## Repo Layout
 
@@ -47,17 +37,17 @@ floating_widget.py             Simple desktop widget
 state_manager.py               Local JSON persistence
 widget_formatters.py           Display formatting helpers
 app_paths.py                   Local path helpers
-public_providers/              Public-safe provider abstractions
-sample_data/                   Sanitized local sample payloads
-evidence/                      Human-readable sanitized evidence summaries
+public_providers/              Provider abstractions
+sample_data/                   Local demo payloads
+evidence/                      Human-readable monthly summary notes
 tests/                         Lightweight regression tests
-ARCHITECTURE.md                Public architecture notes
-SECURITY.md                    Redaction and safety notes
+ARCHITECTURE.md                Architecture notes
+SECURITY.md                    Runtime notes
 ```
 
 ## Sample Evidence Included
 
-This repo includes a sanitized monthly usage summary for `2026-05`:
+This repo includes a monthly usage summary for `2026-05`:
 
 - active days: `18`
 - request count: `23,939`
@@ -76,7 +66,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-The public demo uses sanitized local sample data only. It does not call any external API.
+The default demo reads local sample files from the repository. It does not call any external API.
 
 ## Current Demo Surface
 
@@ -89,32 +79,25 @@ The demo currently renders a local widget with:
 - cache hit ratio
 - active days
 
-All values come from sanitized sample files under [sample_data](./sample_data/).
+All values come from sample files under [sample_data](./sample_data/).
 
-## Extending This Safely
+## Extending This Repo
 
-If you want to adapt this pattern for a real private workflow, keep the split clear:
+Natural next steps for this project include:
 
-- public repo:
-  - UI shell
-  - formatting helpers
-  - provider interface
-  - sanitized evidence
-- private repo:
-  - account credentials
-  - browser session handling
-  - provider-specific auth logic
-  - raw billing exports
+- additional provider adapters
+- historical storage and trend views
+- richer widgets or charts
+- alerting and threshold summaries
 
 See [ARCHITECTURE.md](./ARCHITECTURE.md) and [SECURITY.md](./SECURITY.md).
 
-## Security Boundary
+## Runtime Notes
 
 - local-only desktop app
 - no listening ports
-- no embedded credentials
-- no raw personal usage exports
-- no browser session scraping logic in the public repo
+- no embedded service credentials in the demo
+- no external API calls in the default demo configuration
 
 ## License
 
