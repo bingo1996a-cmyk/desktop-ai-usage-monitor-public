@@ -22,7 +22,7 @@
     }
   ],
   "notes": [
-    "Sanitized summary derived from private usage exports.",
-    "Raw user identifiers and API key fields are intentionally excluded from this public repo."
+    "Monthly summary used by the desktop demo.",
+    "Includes aggregated request, token, and cost metrics."
   ]
 }
