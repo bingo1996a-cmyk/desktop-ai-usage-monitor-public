@@ -1,4 +1,4 @@
-"""Public-safe provider interface."""
+"""Provider interface for usage snapshots."""
 
 from __future__ import annotations
 
