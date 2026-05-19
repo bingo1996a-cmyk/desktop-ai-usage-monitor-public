@@ -1,0 +1,28 @@
+{
+  "period": "2026-05",
+  "active_days": 18,
+  "request_count": 23939,
+  "monthly_cost_cny": 312.8643,
+  "output_tokens": 21795595,
+  "input_cache_hit_tokens": 2980890496,
+  "input_cache_miss_tokens": 80871022,
+  "cache_hit_ratio_percent": 97.36,
+  "models": [
+    {
+      "model": "deepseek-v4-pro",
+      "cost_cny": 239.0436,
+      "days": 15,
+      "requests": 13460
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "cost_cny": 73.8207,
+      "days": 18,
+      "requests": 10479
+    }
+  ],
+  "notes": [
+    "Sanitized summary derived from private usage exports.",
+    "Raw user identifiers and API key fields are intentionally excluded from this public repo."
+  ]
+}

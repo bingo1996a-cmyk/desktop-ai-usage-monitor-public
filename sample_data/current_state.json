@@ -1,0 +1,55 @@
+{
+  "title": "Desktop AI Usage Monitor",
+  "source": "sanitized_sample",
+  "providers": [
+    {
+      "key": "monthly_cost",
+      "label": "Monthly Cost",
+      "kind": "balance",
+      "value": 312.8643,
+      "unit": "CNY",
+      "updated_at": "2026-05-20T10:00:00",
+      "note": "Sanitized monthly evidence derived from private records."
+    },
+    {
+      "key": "request_count",
+      "label": "Request Count",
+      "kind": "count",
+      "value": 23939,
+      "unit": "requests",
+      "updated_at": "2026-05-20T10:00:00"
+    },
+    {
+      "key": "output_tokens",
+      "label": "Output Tokens",
+      "kind": "tokens",
+      "value": 21795595,
+      "unit": "tokens",
+      "updated_at": "2026-05-20T10:00:00"
+    },
+    {
+      "key": "input_cache_hit_tokens",
+      "label": "Input Cache Hit",
+      "kind": "tokens",
+      "value": 2980890496,
+      "unit": "tokens",
+      "updated_at": "2026-05-20T10:00:00"
+    },
+    {
+      "key": "cache_hit_ratio",
+      "label": "Cache Hit Ratio",
+      "kind": "percent",
+      "value": 97.36,
+      "updated_at": "2026-05-20T10:00:00"
+    },
+    {
+      "key": "active_days",
+      "label": "Active Days",
+      "kind": "count",
+      "value": 18,
+      "unit": "days",
+      "updated_at": "2026-05-20T10:00:00"
+    }
+  ],
+  "last_loaded_at": "2026-05-20T10:00:00"
+}
