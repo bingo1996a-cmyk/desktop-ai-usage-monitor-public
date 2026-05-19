@@ -1,49 +1,29 @@
 # Security Notes
 
-## Redaction Policy
+## Local Demo Mode
 
-This repository is a public-safe extract. The following classes of data are intentionally excluded:
+The default configuration in this repository is local-only:
 
-- API keys
-- session cookies
-- account identifiers
-- raw billing rows
-- raw browser state
-- personal machine paths
-- private handoff notes
+- it opens no listening ports
+- it stores runtime state in local files
+- it loads repository sample data from disk
+- it does not contact external APIs in demo mode
 
-## Included Evidence
+## Repository Data
 
-The evidence in this repo is aggregated and sanitized. It is included only to demonstrate real-world usage scale without disclosing raw account records.
+The included monthly summary is used to render the desktop widget and document the metric shape shown in the demo.
 
-Included evidence may contain:
+It includes:
 
 - aggregated request counts
 - aggregated token counts
 - aggregated monthly costs
-- model-level summaries
+- model-level summary fields
 
-Included evidence must not contain:
+## Extending The Project
 
-- raw user identifiers
-- reconstructable credentials
-- session material
-- unredacted provider exports
+If you extend this repository with live service integrations:
 
-## Local Runtime
-
-The public demo is local-only:
-
-- it opens no listening ports
-- it ships no embedded credentials
-- it loads sanitized sample data from disk
-- it does not contact external APIs
-
-## Adapting Privately
-
-If you build on this repo for a private workflow:
-
-- keep provider auth code outside the public repo
-- keep raw exports outside the public repo
-- keep private session logic outside the public repo
-- publish only aggregated evidence
+- keep service configuration separate from the demo surface
+- keep runtime secrets outside versioned project files
+- prefer aggregated summary outputs for public examples
