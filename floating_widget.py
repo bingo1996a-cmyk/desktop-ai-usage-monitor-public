@@ -1,4 +1,4 @@
-"""Minimal local desktop widget for sanitized AI usage metrics."""
+"""Minimal local desktop widget for AI usage metrics."""
 
 from __future__ import annotations
 
@@ -47,7 +47,7 @@ class FloatingWidget(QWidget):
             self._rows.append(row)
             root.addWidget(row)
 
-        self._refresh_button = QPushButton("Reload Sanitized Sample")
+        self._refresh_button = QPushButton("Reload Demo Sample")
         self._refresh_button.clicked.connect(self.reload_sample)
         root.addWidget(self._refresh_button)
 
@@ -74,7 +74,7 @@ class FloatingWidget(QWidget):
         self._source_label.setText(
             "Source: "
             f"{source}\nLast loaded: {str(loaded_at).replace('T', ' ')[:19]}\n"
-            "This public demo uses sanitized local sample data only."
+            "This demo uses local sample data only."
         )
 
         providers = list(state.get("providers", []))
