@@ -1,6 +1,6 @@
 {
   "title": "Desktop AI Usage Monitor",
-  "source": "sanitized_sample",
+  "source": "demo_sample",
   "providers": [
     {
       "key": "monthly_cost",
@@ -9,7 +9,7 @@
       "value": 312.8643,
       "unit": "CNY",
       "updated_at": "2026-05-20T10:00:00",
-      "note": "Sanitized monthly evidence derived from private records."
+      "note": "Monthly usage snapshot used by the demo."
     },
     {
       "key": "request_count",
